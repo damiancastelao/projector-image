@@ -1,0 +1,16 @@
+version: "3.3"
+services:
+  apache:
+    build:
+      context: .
+      args:
+        - IMAGE=wordpress
+        - IDE_NAME=WebStorm 2021.2.3
+        #- USER=www-data
+        #- HOME=/usr/local/apache2/
+    ports:
+      - 9999:9999
+      - 8000:80
+    stdin_open: true  # docker run -i
+    tty: true         # docker run -t
+    
