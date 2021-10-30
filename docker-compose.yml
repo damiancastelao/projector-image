@@ -1,13 +1,11 @@
 version: "3.3"
 services:
-  apache:
+  wp:
     build:
       context: .
       args:
         - IMAGE=wordpress
-        - IDE_NAME=WebStorm 2021.2.3
-        #- USER=www-data
-        #- HOME=/usr/local/apache2/
+        - IDE_NAME=PhpStorm 2021.2.3
     ports:
       - 9999:9999
       - 8000:80
